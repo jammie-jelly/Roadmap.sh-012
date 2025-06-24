@@ -1,0 +1,9 @@
+services:
+  test-dbs:
+    build: .
+    ports:
+      - "5432:5432"   # PostgreSQL
+      - "3306:3306"   # MySQL
+      - "27017:27017" # MongoDB
+    volumes:
+      - ./sqlite_data:/data  # SQLite DB local

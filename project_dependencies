@@ -1,0 +1,4 @@
+psycopg[binary]
+mysql-connector-python
+pymongo
+boto3

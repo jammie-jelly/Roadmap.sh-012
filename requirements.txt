@@ -1,0 +1,4 @@
+boto3==1.38.41
+mysql-connector-python==9.3.0
+psycopg[binary]==3.2.9
+pymongo==4.13.2

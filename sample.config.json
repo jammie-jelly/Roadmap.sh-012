@@ -1,0 +1,196 @@
+{
+    "targets": [
+        {
+            "id": "sample",
+            "database": {
+                "type": "sqlite",
+                "name": "sample",
+                "host": "localhost",
+                "port": 0,
+                "user": "",
+                "password": "",
+                "path": "./test-data-2/sqlite_data/sample.sqlite"
+            },
+            "backup": {
+                "local_path": "./backup",
+                "schedule": "hourly",
+                "cloud": {
+                    "type": "none",
+                    "s3": {
+                        "bucket": "",
+                        "access_key": "",
+                        "secret_key": ""
+                    }
+                }
+            }
+        },
+        {
+            "id": "sample-og",
+            "database": {
+                "type": "sqlite",
+                "name": "sample",
+                "host": "localhost",
+                "port": 0,
+                "user": "",
+                "password": "",
+                "path": "./test-data/sqlite_data/sample.sqlite"
+            },
+            "backup": {
+                "local_path": "./backup",
+                "schedule": "hourly",
+                "cloud": {
+                    "type": "none",
+                    "s3": {
+                        "bucket": "",
+                        "access_key": "",
+                        "secret_key": ""
+                    }
+                }
+            }
+        },
+        {
+            "id": "minio",
+            "database": {
+                "type": "sqlite",
+                "name": "sample",
+                "host": "localhost",
+                "port": 0,
+                "user": "",
+                "password": "",
+                "path": "./test-data-2/sqlite_data/sample.sqlite"
+            },
+            "backup": {
+                "local_path": "/tmp/minio_uploads",
+                "schedule": "hourly",
+                "cloud": {
+                    "type": "s3",
+                    "s3": {
+                        "bucket": "aaa",
+                        "access_key": "minioadmin",
+                        "secret_key": "minioadmin"
+                    }
+                }
+            }
+        },
+        {
+            "id": "postgres",
+            "database": {
+                "type": "postgresql",
+                "name": "postgres",
+                "host": "localhost",
+                "port": 5432,
+                "user": "postgres",
+                "password": "postgres",
+                "path": ""
+            },
+            "backup": {
+                "local_path": "./backup",
+                "schedule": "daily",
+                "cloud": {
+                    "type": "none",
+                    "s3": {
+                        "bucket": "",
+                        "access_key": "",
+                        "secret_key": ""
+                    }
+                }
+            }
+        },
+        {
+            "id": "postgres-2",
+            "database": {
+                "type": "postgresql",
+                "name": "postgres",
+                "host": "localhost",
+                "port": 5432,
+                "user": "postgres",
+                "password": " ",
+                "path": ""
+            },
+            "backup": {
+                "local_path": "./backup",
+                "schedule": "daily",
+                "cloud": {
+                    "type": "none",
+                    "s3": {
+                        "bucket": "",
+                        "access_key": "",
+                        "secret_key": ""
+                    }
+                }
+            }
+        },
+        {
+            "id": "postgres-min",
+            "database": {
+                "type": "postgresql",
+                "name": "postgres",
+                "host": "localhost",
+                "port": 5432,
+                "user": "postgres",
+                "password": " ",
+                "path": ""
+            },
+            "backup": {
+                "local_path": "./backup",
+                "schedule": "daily",
+                "cloud": {
+                    "type": "s3",
+                    "s3": {
+                        "bucket": "aaa",
+                        "access_key": "minioadmin",
+                        "secret_key": "minioadmin"
+                    }
+                }
+            }
+        },
+        {
+            "id": "mysql",
+            "database": {
+                "type": "mysql",
+                "name": "testdb",
+                "host": "localhost",
+                "port": 3306,
+                "user": "root",
+                "password": "",
+                "path": ""
+            },
+            "backup": {
+                "local_path": "./backup",
+                "schedule": "daily",
+                "cloud": {
+                    "type": "none",
+                    "s3": {
+                        "bucket": "",
+                        "access_key": "",
+                        "secret_key": ""
+                    }
+                }
+            }
+        },
+        {
+            "id": "mongo",
+            "database": {
+                "type": "mongodb",
+                "name": "test",
+                "host": "localhost",
+                "port": 27017,
+                "user": "",
+                "password": "",
+                "path": ""
+            },
+            "backup": {
+                "local_path": "./backup",
+                "schedule": "daily",
+                "cloud": {
+                    "type": "none",
+                    "s3": {
+                        "bucket": "",
+                        "access_key": "",
+                        "secret_key": ""
+                    }
+                }
+            }
+        }
+    ]
+}
