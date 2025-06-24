@@ -21,9 +21,6 @@ def load_config() -> Dict:
         raise FileNotFoundError("Configuration file not found. Run 'init' first.")
     with CONFIG_FILE.open("r") as f:
         config = json.load(f)
-    if "targets" not in config:
-        logger.info("Migrating old config to multi-target format")
-        config = {"targets": [{"id": config["database"]["name"] or "default", "database": config["database"], "backup": config["backup"]}]}
         save_config(config)
     return config
 
